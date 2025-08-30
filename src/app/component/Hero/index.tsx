@@ -24,7 +24,7 @@ export default function Hero() {
           return (w + 1) % wordShuffle.length;
         });
       }
-    }, 4000);
+    }, 8000);
 
     return () => clearInterval(wordPlay);
   }, [showVideo]);
@@ -94,7 +94,7 @@ export default function Hero() {
               exit: {},
             }}
             initial="hidden"
-            animate={`${wordShuffle[word]}-${word}-show`}
+            animate={showVideo ? `${wordShuffle[word]}-${word}-show` : "hidden"}
             exit="exit"
             className="sm:col-start-9 sm:col-end-13 max-sm:row-start-9 max-sm:text-center text-start grid lg:translate-x-24"
           >
