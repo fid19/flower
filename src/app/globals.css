@@ -10,6 +10,9 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-playfair: var(--font-playfair);
+  --font-roboto: var(--roboto);
+  --color-secondary-100: #1F2933;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,7 +23,36 @@
 }
 
 body {
-  background: var(--background);
+  /* background: var(--background); */
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  @apply text-5xl font-playfair leading-14 text-[#1F2933];
+}
+
+h2 {
+
+}
+
+h3, a {
+  @apply font-roboto text-base text-[#102A43]
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+
+h6 {
+
+}
+
+p {
+ @apply font-roboto text-xl text-secondary-100 leading-6
 }
