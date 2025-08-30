@@ -3,15 +3,13 @@
 import { navLink } from "@/app/constant/links";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { hover, motion } from "motion/react";
+import { motion } from "motion/react";
 import { useState } from "react";
-
-const MotionLink = motion(Link);
 
 export default function Navbar() {
   const pathname = usePathname();
   const [hoverItem, setHoverItem] = useState("");
-  console.log(hoverItem);
+
   return (
     // <nav className="p-3 fixed w-full flex flex-row items-end justify-between z-20">
     <nav className="p-4 fixed w-full grid z-20 grid-cols-12 items-end">

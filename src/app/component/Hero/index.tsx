@@ -1,15 +1,7 @@
 "use client";
 
-import Image from "next/image";
-import { useEffect, useRef, useState, VideoHTMLAttributes } from "react";
-import {
-  AnimatePresence,
-  motion,
-  stagger,
-  useMotionValueEvent,
-  useScroll,
-  useTransform,
-} from "motion/react";
+import { useEffect, useRef, useState } from "react";
+import { motion, stagger, useScroll, useTransform } from "motion/react";
 import { FlowerAnimation } from "./FlowerAnimation";
 
 const wordShuffle = ["COME ALIVE", "BEAUTIFUL", "WORK"];
