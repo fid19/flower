@@ -59,7 +59,7 @@ export default function Hero() {
               }}
               animate="show"
               initial="hidden"
-              className="text-3xl! lg:text-5xl!"
+              className="text-3xl! lg:text-5xl! text-secondary-100!"
             >
               {"WE MAKE AI".split("").map((letter, i) => {
                 return (
@@ -101,7 +101,7 @@ export default function Hero() {
             {wordShuffle.map((single_word, index) => (
               <motion.h1
                 key={`${single_word}-${index}`}
-                className="text-3xl! lg:text-5xl! row-start-1 col-start-1"
+                className="text-3xl! lg:text-5xl! row-start-1 col-start-1 text-secondary-100!"
                 variants={{
                   hidden: {
                     opacity: 0,
