@@ -21,6 +21,7 @@ export const FlowerAnimation = ({
         width="100%"
         style={{
           opacity: showVideo ? 0 : 1,
+          scale: 1.2,
         }}
         height="100%"
         preload="auto"
@@ -43,6 +44,7 @@ export const FlowerAnimation = ({
         loop={true}
         style={{
           opacity: showVideo ? 1 : 0,
+          scale: 1.2,
         }}
         className="object-cover max-sm:-left-24 absolute"
         src="/flower-video-2.webm"
