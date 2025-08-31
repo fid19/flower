@@ -12,7 +12,7 @@ export default function Navbar() {
 
   return (
     // <nav className="p-3 fixed w-full flex flex-row items-end justify-between z-20">
-    <nav className="px-8 py-4  bg-white/0 top-4 fixed w-full grid z-20 grid-cols-12 items-end backdrop-blur-lg">
+    <nav className="px-13 py-4  bg-white/0 top-4 fixed w-full grid z-20 grid-cols-12  backdrop-blur-lg items-center">
       <div className="px-6 absolute flex inset-x-0 -bottom-1 items-center gap-5">
         <motion.div
           whileHover={{
@@ -61,14 +61,71 @@ export default function Navbar() {
         </motion.div>
       </div>
 
-      <div className="max-sm:hidden justify-start col-start-1 col-end-4">
+      <div className="px-6 absolute flex inset-x-0 -top-1 items-center gap-5">
+        <motion.div
+          whileHover={{
+            rotate: 180,
+          }}
+          transition={{
+            duration: 0.3,
+          }}
+          className="h-2 w-2 text-secondary-100"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="100%"
+            viewBox="0 0 13 12"
+            fill="none"
+            className="icon-12px"
+          >
+            <path
+              d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+              fill="currentColor"
+            ></path>
+          </svg>
+        </motion.div>
+        <div className="h-0.5 flex-1 bg-secondary-100/30"></div>
+        <motion.div
+          whileHover={{
+            rotate: 180,
+          }}
+          transition={{
+            duration: 0.3,
+          }}
+          className="h-2 w-2 text-secondary-100"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="100%"
+            viewBox="0 0 13 12"
+            fill="none"
+            className="icon-12px"
+          >
+            <path
+              d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+              fill="currentColor"
+            ></path>
+          </svg>
+        </motion.div>
+      </div>
+
+      <div className="max-sm:hidden justify-start col-start-1 col-end-5 lg:col-end-4">
         <motion.ul className="flex gap-14 item">
           {navLink.slice(2).map((_) => (
             <motion.li
               key={_.link}
               onHoverStart={() => setHoverItem(_.link)}
               onHoverEnd={() => setHoverItem("")}
-              className={`relative `}
+              className={`relative`}
+              variants={{
+                [hoverItem]: {
+                  opacity: [0.3, 1, 0.5, 1],
+                },
+                default: {
+                  opacity: 1,
+                },
+              }}
+              animate={hoverItem === _.link ? hoverItem : "default"}
             >
               <Link
                 // className={`${pathname == _.link ? "font-extrabold" : ""} `}
@@ -92,7 +149,7 @@ export default function Navbar() {
         </motion.ul>
       </div>
 
-      <span className="col-start-6 col-end-7 text-3xl text-[#513C06] max-sm:text-center max-sm:col-span-full  font-medium text-end font-serif">
+      <span className="col-start-6 col-end-9 sm:col-start-5  text-3xl text-[#513C06] max-sm:text-center max-sm:col-span-full  font-medium text-center font-serif ">
         FlowerCo
       </span>
 
@@ -104,6 +161,15 @@ export default function Navbar() {
               onHoverStart={() => setHoverItem(_.link)}
               onHoverEnd={() => setHoverItem("")}
               className={`relative`}
+              variants={{
+                [hoverItem]: {
+                  opacity: [0.3, 1, 0.5, 1],
+                },
+                default: {
+                  opacity: 1,
+                },
+              }}
+              animate={hoverItem === _.link ? hoverItem : "default"}
             >
               <Link
                 className={`${
