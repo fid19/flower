@@ -5,6 +5,7 @@ import { motion, stagger, useScroll, useTransform } from "motion/react";
 import { FlowerAnimation } from "./FlowerAnimation";
 import TextType from "../ui/TextType";
 import { wordShuffle } from "@/app/constant/constant";
+import Lanyard from "../Lanyard";
 
 export default function Hero() {
   const [showVideo, setShowVideo] = useState(false);
@@ -30,8 +31,11 @@ export default function Hero() {
   }, [showVideo]);
 
   return (
-    <div ref={heroRef}>
-      <div className="overflow-clip bg-radial-[at_50%_50%] from-10% from=[#FFFAEB] via-[#EEE6CE] via-70% to -100% to-[#EEE6CE] h-[100vh] sticky top-0">
+    <div
+      className="pb-12 overflow-clip bg-radial-[at_50%_50%] from-10% from=[#FFFAEB] via-[#EEE6CE] via-70% to -100% to-[#EEE6CE]"
+      ref={heroRef}
+    >
+      <div className="h-[100vh] sticky top-0">
         <motion.div
           className="mx-auto aspect-square h-full"
           style={{
