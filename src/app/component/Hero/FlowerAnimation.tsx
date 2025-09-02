@@ -42,6 +42,8 @@ export const FlowerAnimation = ({
         ref={videoRef2}
         preload="auto"
         playsInline
+        autoPlay
+        muted
         loop={true}
         style={{
           opacity: showVideo ? 1 : 0,
