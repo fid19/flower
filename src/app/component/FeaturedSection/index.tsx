@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 
 export default function FeaturedSection() {
   return (
-    <div className="relative min-h-96 bg-radial-[at_50%_50%] from-10% from-[#f6ebd1] via-[#EEE6CE] via-70% to -100% to-[#EEE6CE] py-12 px-6">
+    <div className="relative min-h-96 bg-radial-[at_50%_50%] from-10% from-[#f6ebd1] via-[#EEE6CE] via-70% to-100% to-[#EEE6CE] py-6 md:py-12 px-6">
       <div className="px-6 absolute flex inset-x-0 top-0 items-center gap-5">
         <motion.div
           whileHover={{
@@ -54,18 +54,20 @@ export default function FeaturedSection() {
         </motion.div>
       </div>
 
-      <div className="relative flex md:h-[70vh] flex-row-reverse">
-        {/* <HeaderText text="Blooming Beauty" textClass="absolute p-4" /> */}
-        <video
-          preload="auto"
-          playsInline
-          loop={true}
-          autoPlay
-          className="w-full aspect-video md:h-full object-cover"
-          src="/butterfly-flower.webm"
-        ></video>
+      <div className="relative flex min-h-96 md:h-[70vh] flex-col sm:flex-row-reverse sm:max-w-[1200px] mx-auto">
+        <div className="max-sm:h-24 w-full md:w-full relative">
+          <video
+            preload="auto"
+            playsInline
+            loop={true}
+            autoPlay
+            muted
+            className="w-full aspect-square h-72  absolute object-cover content sm:h-full sm:relative"
+            src="/butterfly-flower.webm"
+          ></video>
+        </div>
 
-        <div className="absolute max-md:bottom-10 md:relative bg-[#EEE6CE] pb-3 justify-between flex flex-col w-full z-10">
+        <div className="pb-3 justify-between flex flex-col w-full lg:w-1/2 z-10 gap-8">
           <div>
             <span className="text-secondary-100 text-xs sm:text-sm lg:text-lg uppercase inline-block pl-1.5">
               Discover the magic of flower with us
@@ -75,15 +77,15 @@ export default function FeaturedSection() {
             </h2>
           </div>
 
-          <p className="hidden md:inline-block bg-[#EEE6CE] pr-6 text-justify text-lg! md:text-lg! leading-8! text-secondary-100 font-normal! font-sans!">
-            Whether it&apo;s a love confession whispered on a rose petal or a
+          <p className="md:inline-block pr-6 text-justify text-lg! md:text-lg! leading-7! text-secondary-100! font-light! font-sans!">
+            Whether it&apos; a love confession whispered on a rose petal or a
             joyous symphony of colors celebrating life&apos;s milestones, let
             our arrangements be our heartfelt expression. Discover the magic of
             flowers with us.
           </p>
         </div>
 
-        <div className="absolute inset-0 bg-[#EEE6CE] opacity-50"></div>
+        <div className="absolute inset-0 bg-[#EEE6CE] opacity-80 sm:opacity-40"></div>
       </div>
     </div>
   );

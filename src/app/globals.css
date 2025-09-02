@@ -56,3 +56,23 @@ h6 {
 p {
  @apply font-roboto text-xl text-secondary-100 leading-6
 }
+
+
+.content {
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  -webkit-mask-image: radial-gradient(circle at center, #000 10%, transparent 100%);
+  mask-image: radial-gradient(circle at center, #000 10%, transparent 55%);
+}
+
+/* @media (width >= 48rem 768px) {
+  .content {
+  -webkit-mask-image: radial-gradient(circle at center, #000 10%, transparent 100%);
+  mask-image: radial-gradient(circle at center, #000 40%, transparent 50%);
+
+  }
+} */
+
+
