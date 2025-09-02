@@ -4,8 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { motion, stagger, useScroll, useTransform } from "motion/react";
 import { FlowerAnimation } from "./FlowerAnimation";
 import TextType from "../ui/TextType";
-
-const wordShuffle = ["IS A BEAUTY", "BLOOMS", "TELLS A STORY"];
+import { wordShuffle } from "@/app/constant/constant";
 
 export default function Hero() {
   const [showVideo, setShowVideo] = useState(false);
@@ -32,7 +31,7 @@ export default function Hero() {
 
   return (
     <div ref={heroRef}>
-      <div className="overflow-clip bg-radial-[at_50%_50%] from-10% from-white via-[#EEE6CE] via-70% to -100% to-[#EEE6CE] h-[100vh] sticky top-0">
+      <div className="overflow-clip bg-radial-[at_50%_50%] from-10% from=[#FFFAEB] via-[#EEE6CE] via-70% to -100% to-[#EEE6CE] h-[100vh] sticky top-0">
         <motion.div
           className="mx-auto aspect-square h-full"
           style={{
@@ -48,7 +47,7 @@ export default function Hero() {
       max-sm:grid-cols-1
       max-sm:grid-rows-12 h-full w-full top-0 items-center"
         >
-          <div className="max-sm:row-start-3 max-sm:text-center sm:col-start-2 sm:col-end-7">
+          <div className="max-sm:row-start-3 max-sm:text-center sm:col-start-2 sm:col-end-6 text-end">
             <motion.h1
               variants={{
                 hidden: {},
@@ -60,7 +59,7 @@ export default function Hero() {
               }}
               animate="show"
               initial="hidden"
-              className="text-3xl! lg:text-5xl! text-secondary-100! font-serif!"
+              className="text-3xl! font-playfair lg:text-5xl! text-secondary-100! whitespace-nowrap"
             >
               {"EVERY FLOWER".split("").map((letter, i) => {
                 return (
@@ -70,7 +69,6 @@ export default function Hero() {
                         opacity: 0,
                         y: -20,
                       },
-
                       show: {
                         opacity: 1,
                         y: 0,
@@ -87,7 +85,7 @@ export default function Hero() {
 
           <TextType
             text={wordShuffle}
-            className="sm:col-start-9 sm:col-end-13 max-sm:row-start-9 text-start grid  text-3xl! max-sm:text-center lg:text-5xl! text-secondary-100! font-serif!"
+            className="sm:col-start-9 sm:col-end-13 max-sm:row-start-9 text-start grid  text-3xl! max-sm:text-center lg:text-5xl! text-secondary-100! font-playfair whitespace-nowrap!"
             startOnVisible={showVideo}
           />
 
@@ -142,9 +140,51 @@ export default function Hero() {
             ))}
           </motion.div> */}
         </div>
+
+        <div className="absolute bottom-5 left-1/2 -translate-1/2  bg-secondary-100/50 z-20 p-1 flex items-center gap-2">
+          <motion.div
+            layout
+            animate={{
+              y: -2,
+            }}
+            initial={{
+              y: 2,
+            }}
+            transition={{
+              repeatType: "reverse",
+              repeat: Infinity,
+              duration: 0.4,
+              ease: "linear",
+            }}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="100%"
+              viewBox="0 0 13 13"
+              fill="none"
+              className="w-2 h-2 inline-block rotate-90"
+            >
+              <path
+                d="M7.40002 4.40039L11.4 8.40039L7.40002 12.4004"
+                stroke="currentColor"
+                strokeWidth="1.6"
+                strokeMiterlimit="10"
+              ></path>
+              <path
+                d="M1 0V6V8.4H11.4"
+                stroke="currentColor"
+                strokeWidth="1.6"
+                strokeMiterlimit="10"
+              ></path>
+            </svg>
+          </motion.div>
+          <span className="text-[10px] my-auto! inline-block font-medium font-sans">
+            SCROLL DOWN
+          </span>
+        </div>
       </div>
 
-      <section className="h-[300vh] bg-radial-[at_50%_50%] from-30% from-white via-[#EEE6CE] via-70% to-100% to-[#EEE6CE]"></section>
+      <section className="h-[300vh]"></section>
     </div>
   );
 }

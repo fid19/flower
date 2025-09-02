@@ -1,5 +1,6 @@
 import Navbar from "./component/Navbar";
 import Hero from "./component/Hero";
+import FeaturedSection from "./component/FeaturedSection";
 
 export default function Home() {
   return (
@@ -10,6 +11,10 @@ export default function Home() {
       {/* ----------------- Hero Section ---------------- */}
 
       <Hero />
+
+      {/* ------------ Section --------------- */}
+
+      <FeaturedSection />
     </div>
   );
 }

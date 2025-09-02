@@ -16,3 +16,11 @@ export const navLink = [
     link: "/work",
   },
 ];
+
+export const wordShuffle = [
+  "IS A BEAUTY",
+  "BLOOMS",
+  "TELLS A STORY",
+  "SHINES",
+  "MATTERS",
+];

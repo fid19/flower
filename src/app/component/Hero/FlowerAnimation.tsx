@@ -37,6 +37,7 @@ export const FlowerAnimation = ({
           videoRef2.current?.play();
         }}
       />
+
       <video
         ref={videoRef2}
         preload="auto"
@@ -46,7 +47,7 @@ export const FlowerAnimation = ({
           opacity: showVideo ? 1 : 0,
           scale: 1.2,
         }}
-        className="object-cover max-sm:-left-24 absolute"
+        className="object-cover max-sm:-left-24 absolute h-full"
         src="/flower-video-2.webm"
       />
     </div>
