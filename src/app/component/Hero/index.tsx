@@ -3,8 +3,9 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, stagger, useScroll, useTransform } from "motion/react";
 import { FlowerAnimation } from "./FlowerAnimation";
+import TextType from "../ui/TextType";
 
-const wordShuffle = ["COME ALIVE", "BEAUTIFUL", "WORK"];
+const wordShuffle = ["IS A BEAUTY", "BLOOMS", "TELLS A STORY"];
 
 export default function Hero() {
   const [showVideo, setShowVideo] = useState(false);
@@ -61,7 +62,7 @@ export default function Hero() {
               initial="hidden"
               className="text-3xl! lg:text-5xl! text-secondary-100! font-serif!"
             >
-              {"WE MAKE AI".split("").map((letter, i) => {
+              {"EVERY FLOWER".split("").map((letter, i) => {
                 return (
                   <motion.span
                     variants={{
@@ -83,20 +84,26 @@ export default function Hero() {
               })}
             </motion.h1>
           </div>
-          <motion.div
+
+          <TextType
+            text={wordShuffle}
+            className="sm:col-start-9 sm:col-end-13 max-sm:row-start-9 text-start grid  text-3xl! max-sm:text-center lg:text-5xl! text-secondary-100! font-serif!"
+            startOnVisible={showVideo}
+          />
+
+          {/* <motion.div
             variants={{
               hidden: {
-                // opacity: 0,
               },
               [`${wordShuffle[word]}-${word}-show`]: {
-                // opacity: 1,
+                
               },
               exit: {},
             }}
             initial="hidden"
             animate={showVideo ? `${wordShuffle[word]}-${word}-show` : "hidden"}
             exit="exit"
-            className="sm:col-start-9 sm:col-end-13 max-sm:row-start-9 max-sm:text-center text-start grid lg:translate-x-24"
+            className="sm:col-start-8 sm:col-end-13 max-sm:row-start-9 max-sm:text-center text-start grid lg:translate-x-24"
           >
             {wordShuffle.map((single_word, index) => (
               <motion.h1
@@ -133,52 +140,7 @@ export default function Hero() {
                 ))}
               </motion.h1>
             ))}
-            {/* <motion.h1
-              variants={{
-                hidden: {},
-                show: {
-                  transition: {
-                    delayChildren: stagger(0.1, {
-                      from: "center",
-                    }),
-                  },
-                },
-                exit: {},
-              }}
-              animate={showVideo ? "show" : "hidden"}
-              initial="hidden"
-              exit="exit"
-              className="text-3xl! lg:text-5xl! "
-            >
-              {wordShuffle[word].split("").map((letter, index) => {
-                return (
-                  <motion.span
-                    key={`${letter}-${index}`}
-                    variants={{
-                      word: {
-                        opacity: 0,
-                        y: -20,
-                      },
-
-                      show: {
-                        opacity: 1,
-                        y: 0,
-                      },
-
-                      exit: {
-                        opacity: 0,
-                        transition: {
-                          delay: 10,
-                        },
-                      },
-                    }}
-                  >
-                    {letter}
-                  </motion.span>
-                );
-              })}
-            </motion.h1> */}
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
 

@@ -15,7 +15,7 @@ export const FlowerAnimation = ({
   }
 
   return (
-    <div className="mx-auto relative aspect-square h-full">
+    <div className="relative aspect-square h-full">
       <video
         poster="/flower.webp"
         width="100%"
