@@ -5,7 +5,6 @@ import { motion, stagger, useScroll, useTransform } from "motion/react";
 import { FlowerAnimation } from "./FlowerAnimation";
 import TextType from "../ui/TextType";
 import { wordShuffle } from "@/app/constant/constant";
-import Lanyard from "../Lanyard";
 
 export default function Hero() {
   const [showVideo, setShowVideo] = useState(false);

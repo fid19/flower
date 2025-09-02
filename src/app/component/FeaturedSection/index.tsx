@@ -76,9 +76,9 @@ export default function FeaturedSection() {
           </div>
 
           <p className="hidden md:inline-block bg-[#EEE6CE] pr-6 text-justify text-lg! md:text-lg! leading-8! text-secondary-100 font-normal! font-sans!">
-            Whether it's a love confession whispered on a rose petal or a joyous
-            symphony of colors celebrating life's milestones, let our
-            arrangements be our heartfelt expression. Discover the magic of
+            Whether it&apo;s a love confession whispered on a rose petal or a
+            joyous symphony of colors celebrating life&apos;s milestones, let
+            our arrangements be our heartfelt expression. Discover the magic of
             flowers with us.
           </p>
         </div>
