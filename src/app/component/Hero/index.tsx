@@ -1,7 +1,13 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { motion, stagger, useScroll, useTransform } from "motion/react";
+import {
+  AnimatePresence,
+  motion,
+  stagger,
+  useScroll,
+  useTransform,
+} from "motion/react";
 import { FlowerAnimation } from "./FlowerAnimation";
 import TextType from "../ui/TextType";
 import { wordShuffle } from "@/app/constant/constant";
@@ -16,6 +22,8 @@ export default function Hero() {
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.5]);
 
   const [word, setWord] = useState(0);
+
+  useEffect(() => {}, []);
 
   useEffect(() => {
     const wordPlay = setInterval(() => {
@@ -144,47 +152,64 @@ export default function Hero() {
           </motion.div> */}
         </div>
 
-        <div className="absolute bottom-5 left-1/2 -translate-1/2  bg-secondary-100/50 z-20 p-1 flex items-center gap-2">
-          <motion.div
-            layout
-            animate={{
-              y: -2,
-            }}
-            initial={{
-              y: 2,
-            }}
-            transition={{
-              repeatType: "reverse",
-              repeat: Infinity,
-              duration: 0.4,
-              ease: "linear",
-            }}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="100%"
-              viewBox="0 0 13 13"
-              fill="none"
-              className="w-2 h-2 inline-block rotate-90"
-            >
-              <path
-                d="M7.40002 4.40039L11.4 8.40039L7.40002 12.4004"
-                stroke="currentColor"
-                strokeWidth="1.6"
-                strokeMiterlimit="10"
-              ></path>
-              <path
-                d="M1 0V6V8.4H11.4"
-                stroke="currentColor"
-                strokeWidth="1.6"
-                strokeMiterlimit="10"
-              ></path>
-            </svg>
-          </motion.div>
-          <span className="text-[10px] my-auto! inline-block font-medium font-sans">
-            SCROLL DOWN
-          </span>
-        </div>
+        <motion.div
+          layout
+          className="absolute bottom-5 left-1/2 -translate-1/2  bg-secondary-100/50 z-20 p-1 flex items-center gap-2"
+        >
+          {showVideo ? (
+            <>
+              <motion.div
+                layout
+                animate={{
+                  y: -2,
+                }}
+                initial={{
+                  y: 2,
+                }}
+                transition={{
+                  repeatType: "reverse",
+                  repeat: Infinity,
+                  duration: 0.4,
+                  ease: "linear",
+                }}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="100%"
+                  viewBox="0 0 13 13"
+                  fill="none"
+                  className="w-2 h-2 inline-block rotate-90"
+                >
+                  <path
+                    d="M7.40002 4.40039L11.4 8.40039L7.40002 12.4004"
+                    stroke="currentColor"
+                    strokeWidth="1.6"
+                    strokeMiterlimit="10"
+                  ></path>
+                  <path
+                    d="M1 0V6V8.4H11.4"
+                    stroke="currentColor"
+                    strokeWidth="1.6"
+                    strokeMiterlimit="10"
+                  ></path>
+                </svg>
+              </motion.div>
+              <span className="text-[10px] my-auto! inline-block font-medium font-sans">
+                SCROLL DOWN
+              </span>
+            </>
+          ) : (
+            <>
+              <motion.span
+                layout
+                layoutId="scrollDown"
+                className="text-[10px] my-auto! inline-block font-medium p-1 font-sans"
+              >
+                LOADING...
+              </motion.span>
+            </>
+          )}
+        </motion.div>
       </div>
 
       <section className="h-[300vh]"></section>

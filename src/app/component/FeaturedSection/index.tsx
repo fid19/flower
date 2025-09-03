@@ -10,21 +10,33 @@ export default function FeaturedSection() {
       <Divider />
 
       <motion.div
+        layout
         variants={{
           hidden: {
             opacity: 0,
+            x: -20,
           },
           show: {
             opacity: 1,
+            x: 0,
           },
         }}
+        transition={{
+          duration: 0.3,
+          delay: 2,
+        }}
+        viewport={{
+          once: true,
+        }}
+        whileInView="show"
+        initial="hidden"
         className="max-w-[1200px] mx-auto mb-4"
       >
-        <span className="text-secondary-100 text-xs sm:text-sm lg:text-lg uppercase inline-block pl-1.5">
+        <span className="text-secondary-100 text-xs sm:text-sm font-serif! lg:text-lg uppercase inline-block pl-1.5">
           Discover the magic of flower with us
         </span>
         <h2 className="text-4xl md:text-5xl lg:text-7xl font-playfair text-secondary-100">
-          Blooming Beauty
+          A Dozen Years of Care
         </h2>
       </motion.div>
 
@@ -52,7 +64,7 @@ export default function FeaturedSection() {
         }}
         className="relative grid grid-cols-6 sm:grid-cols-12 min-h-96 h-[80vh] flex-col sm:flex-row max-w-[1200px] mx-auto w-full gap-12"
       >
-        <div className="justify-between flex flex-col col-span-full sm:col-span-8 z-10 gap-8">
+        <div className="justify-between flex flex-col col-span-full md:col-span-6 z-10 gap-8">
           <motion.p
             variants={{
               hidden: {
@@ -63,13 +75,33 @@ export default function FeaturedSection() {
                 opacity: 1,
               },
             }}
-            className="col-span-full md:inline-block text-justify text-sm! md:text-lg! leading-7! text-secondary-100! font-extralight! font-sans! rounded-sm bg-[#EEE6CE]/70 backdrop-blur-md p-4 m-1"
+            className="col-span-full md:inline-block text-justify text-sm! sm:text-lg! leading-6! text-secondary-100! font-medium! font-serif!  bg-[#EEE6CE] backdrop-blur-md py-4 sm:py-6 pr-6"
           >
-            Whether it&apos;s a love confession whispered on a rose petal or a
-            joyous symphony of colors celebrating life&apos;s milestones, let
-            our arrangements be our heartfelt expression. Discover the magic of
-            flowers with us.
+            It&apos;s our 12th birthday. But this party is all about you. Our
+            newest sweet treats, pampering picks, and flower delivery are here
+            to celebrate all the ways you care wildly.
           </motion.p>
+
+          <div className="m-1">
+            <motion.a
+              variants={{
+                hidden: {
+                  opacity: 0,
+                },
+
+                show: {
+                  opacity: 1,
+                },
+              }}
+              whileHover={{
+                backgroundColor: "#513C06",
+                color: "#EEE6CE",
+              }}
+              className="cursor-pointer mr-auto inline-block col-span-1 bg-[#EEE6CE]/80 p-4 text-secondary-100 font-bold!"
+            >
+              Shop Now
+            </motion.a>
+          </div>
         </div>
 
         <video
@@ -78,11 +110,11 @@ export default function FeaturedSection() {
           loop={true}
           autoPlay
           muted
-          className="absolute w-full inset-0 h-full object-cover rounded-sm"
-          src="/butterfly-flower.webm"
+          className="absolute w-full inset-0 h-full object-cover rounded-sm "
+          src="/flower-3-small.mp4"
         ></video>
 
-        <div className="absolute inset-0 bg-[#EEE6CE] opacity-10"></div>
+        <div className="absolute inset-0 bg-[#EEE6CE] opacity-30"></div>
       </motion.div>
     </div>
   );
