@@ -3,7 +3,7 @@ import Divider from "../ui/Divider";
 import SectionContainer from "../ui/SectionContainer";
 import FlowerCard from "../ui/FlowerCard";
 
-export default function () {
+export default function TopPicksSection() {
   return (
     <SectionContainer className="bg-[#FFFBEA] space-y-16">
       <div className="max-w-[1200px] mx-auto  bg-gradient-to-l from-[#e7dec4] from-5% via-20% via-[#EEE6CE] to-90% to-[#e7dec4] min-h-16 p-6 border-[0.1px] w-full shadow-lg shadow-secondary-100/30 border-none">
