@@ -86,31 +86,31 @@ export default function FeaturedSection() {
             }}
             whileInView="show"
             initial="hidden"
-            className="max-sm:pb-4 max-sm:bg-[#EEE6CE]"
+            className="max-sm:pb-4 max-sm:bg-[#EEE6CE]/90"
           >
-            <span className="text-secondary-100 text-xs sm:text-sm font-serif! lg:text-lg uppercase inline-block pl-1.5">
+            <span className="text-secondary-100 text-xs sm:text-sm font-playfair!  font-light! lg:text-lg uppercase inline-block pl-1.5">
               Discover the magic of flower with us
             </span>
-            <h2 className="text-4xl md:text-5xl lg:text-7xl font-playfair text-secondary-100">
+            <h2 className="text-4xl md:text-5xl lg:text-7xl font-playfair text-secondary-100 mb-4">
               A Dozen Years of Care
             </h2>
-          </motion.div>
-          <motion.p
-            variants={{
-              hidden: {
-                opacity: 0,
-              },
+            <motion.p
+              variants={{
+                hidden: {
+                  opacity: 0,
+                },
 
-              show: {
-                opacity: 1,
-              },
-            }}
-            className="col-span-full md:inline-block text-justify text-sm! sm:text-lg! leading-6! text-secondary-100! font-medium! font-serif!  bg-[#EEE6CE] backdrop-blur-md py-4 sm:py-6 pr-6"
-          >
-            It&apos;s our 12th birthday. But this party is all about you. Our
-            newest sweet treats, pampering picks, and flower delivery are here
-            to celebrate all the ways you care wildly.
-          </motion.p>
+                show: {
+                  opacity: 1,
+                },
+              }}
+              className="col-span-full md:inline-block text-justify text-sm! sm:text-lg! leading-6! text-secondary-100! font-medium! font-serif! backdrop-blur-md py-4 sm:py-6 pr-6"
+            >
+              It&apos;s our 12th birthday. But this party is all about you. Our
+              newest sweet treats, pampering picks, and flower delivery are here
+              to celebrate all the ways you care wildly.
+            </motion.p>
+          </motion.div>
 
           <div className="m-1">
             <motion.a
@@ -130,7 +130,7 @@ export default function FeaturedSection() {
           </div>
         </div>
 
-        <div className="inset-y-0 absolute right-0 left-0 lg:left-1/2">
+        <div className="inset-y-0 absolute right-0 left-0 sm:left-1/2">
           <video
             preload="auto"
             playsInline
