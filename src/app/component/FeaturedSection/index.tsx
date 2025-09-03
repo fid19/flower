@@ -9,7 +9,7 @@ export default function FeaturedSection() {
     <div className="relative min-h-96 bg-radial-[at_50%_50%] from-10% from-[#f6ebd1] via-[#EEE6CE] via-70% to-100% to-[#EEE6CE] py-12 md:py-24 px-6">
       <Divider />
 
-      <motion.div
+      {/* <motion.div
         layout
         variants={{
           hidden: {
@@ -38,7 +38,7 @@ export default function FeaturedSection() {
         <h2 className="text-4xl md:text-5xl lg:text-7xl font-playfair text-secondary-100">
           A Dozen Years of Care
         </h2>
-      </motion.div>
+      </motion.div> */}
 
       <motion.div
         variants={{
@@ -64,7 +64,37 @@ export default function FeaturedSection() {
         }}
         className="relative grid grid-cols-6 sm:grid-cols-12 min-h-96 h-[80vh] flex-col sm:flex-row max-w-[1200px] mx-auto w-full gap-12"
       >
-        <div className="justify-between flex flex-col col-span-full md:col-span-6 z-10 gap-8">
+        <div className="justify-between flex flex-col col-span-full sm:col-span-6 z-10 gap-8 bg-[#EEE6CE]/0 sm:bg-[#EEE6CE]">
+          <motion.div
+            layout
+            variants={{
+              hidden: {
+                opacity: 0,
+                x: -20,
+              },
+              show: {
+                opacity: 1,
+                x: 0,
+              },
+            }}
+            transition={{
+              duration: 0.3,
+              delay: 2,
+            }}
+            viewport={{
+              once: true,
+            }}
+            whileInView="show"
+            initial="hidden"
+            className="max-sm:pb-4 max-sm:bg-[#EEE6CE]"
+          >
+            <span className="text-secondary-100 text-xs sm:text-sm font-serif! lg:text-lg uppercase inline-block pl-1.5">
+              Discover the magic of flower with us
+            </span>
+            <h2 className="text-4xl md:text-5xl lg:text-7xl font-playfair text-secondary-100">
+              A Dozen Years of Care
+            </h2>
+          </motion.div>
           <motion.p
             variants={{
               hidden: {
@@ -93,26 +123,24 @@ export default function FeaturedSection() {
                   opacity: 1,
                 },
               }}
-              whileHover={{
-                backgroundColor: "#513C06",
-                color: "#EEE6CE",
-              }}
-              className="cursor-pointer mr-auto inline-block col-span-1 bg-[#EEE6CE]/80 p-4 text-secondary-100 font-bold!"
+              className=" hover:bg-secondary-100 hover:text-[#EEE6CE]! hover:border-2 hover:border-secondary-100 cursor-pointer mr-auto inline-block col-span-1 bg-[#EEE6CE]/80 p-4 border-2 text-secondary-100 font-bold! transition duration-200 ease-in-out"
             >
               Shop Now
             </motion.a>
           </div>
         </div>
 
-        <video
-          preload="auto"
-          playsInline
-          loop={true}
-          autoPlay
-          muted
-          className="absolute w-full inset-0 h-full object-cover rounded-sm "
-          src="/flower-3-small.mp4"
-        ></video>
+        <div className="inset-y-0 absolute right-0 left-0 lg:left-1/2">
+          <video
+            preload="auto"
+            playsInline
+            loop={true}
+            autoPlay
+            muted
+            className=" w-full h-full object-cover rounded-sm"
+            src="/flower-3-small.mp4"
+          ></video>
+        </div>
 
         <div className="absolute inset-0 bg-[#EEE6CE] opacity-30"></div>
       </motion.div>

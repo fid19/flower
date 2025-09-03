@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 export const FlowerAnimation = ({
   setShowVideo,
@@ -10,15 +10,20 @@ export const FlowerAnimation = ({
   const videoRef = useRef<HTMLVideoElement>(null);
   const videoRef2 = useRef<HTMLVideoElement>(null);
 
-  if (videoRef.current) {
-    videoRef.current.playbackRate = 2;
-  }
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 2;
+    }
+
+    if (videoRef2.current) {
+      videoRef2.current.playbackRate = 2;
+    }
+  }, []);
 
   return (
     <div className="relative aspect-square h-full">
       <video
         poster="/flower.webp"
-        width="100%"
         style={{
           opacity: showVideo ? 0 : 1,
           scale: 1.2,
@@ -29,12 +34,14 @@ export const FlowerAnimation = ({
         ref={videoRef}
         disablePictureInPicture
         muted={true}
+        loop={false}
         autoPlay={true}
         className="object-cover max-sm:-left-24 absolute"
         src="/flower-video.webm"
         onEnded={() => {
-          setShowVideo(() => true);
           videoRef2.current?.play();
+          setShowVideo(() => true);
+          window.setTimeout(() => {}, 0);
         }}
       />
 
@@ -42,14 +49,15 @@ export const FlowerAnimation = ({
         ref={videoRef2}
         preload="auto"
         playsInline
-        autoPlay
+        disablePictureInPicture
+        autoPlay={false}
         muted
         loop={true}
         style={{
           opacity: showVideo ? 1 : 0,
           scale: 1.2,
         }}
-        className="object-cover max-sm:-left-24 absolute h-full"
+        className="object-cover max-sm:-left-24 absolute"
         src="/flower-video-2.webm"
       />
     </div>
