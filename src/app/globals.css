@@ -37,7 +37,7 @@ h2 {
 }
 
 h3, a {
-  @apply font-serif tracking-widest text-[#513C06] text-sm font-normal
+  @apply font-serif text-[#513C06]
 }
 
 h4 {

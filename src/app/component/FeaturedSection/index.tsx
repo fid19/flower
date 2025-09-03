@@ -144,6 +144,8 @@ export default function FeaturedSection() {
 
         <div className="absolute inset-0 bg-[#EEE6CE] opacity-30"></div>
       </motion.div>
+
+      <Divider textClass="top-auto z-10 -bottom-1" />
     </div>
   );
 }
