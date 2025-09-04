@@ -92,7 +92,7 @@ export default function FeaturedSection() {
               Discover the magic of flower with us
             </span>
             <h2 className="text-4xl md:text-5xl lg:text-5xl font-playfair text-secondary-100 mb-4 font-bold">
-              A Dozen Years of Care
+              ABOUT FLOWERCO
             </h2>
             <motion.p
               variants={{
@@ -104,11 +104,16 @@ export default function FeaturedSection() {
                   opacity: 1,
                 },
               }}
-              className="col-span-full md:inline-block text-justify text-sm! sm:text-lg! leading-7! text-secondary-100!s font-playfair! backdrop-blur-md py-4 sm:py-6 pr-6"
+              className="col-span-full md:inline-block text-justify text-sm! sm:text-lg! sm:leading-7! leading-8! text-secondary-100!s font-playfair! backdrop-blur-md py-4 sm:py-6 pr-6"
             >
-              It&apos;s our 12th birthday. But this party is all about you. Our
-              newest sweet treats, pampering picks, and flower delivery are here
-              to celebrate all the ways you care wildly.
+              Hi, we&apos;re Petal & Co. We don&apos;t just deliver flowers — we
+              deliver care. Every bouquet is treated as if it were our own.
+              That&apos;s why Henry makes sure your flowers always arrive on
+              time. Why Sophia carefully sources distinctive stems just for you.
+              And why our Customer Care team goes the extra mile if something
+              isn&apos;t perfect. For us, caring means celebrating life&apos;s
+              little gestures every day, as well as the big occasions —
+              birthdays, anniversaries, and everything in between.
             </motion.p>
           </motion.div>
 
