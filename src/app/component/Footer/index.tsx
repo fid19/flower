@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <SectionContainer className="bg-secondary-100">
+    <SectionContainer className="bg-gradient-to-r from-10% from-secondary-100 via-50% via-[#624d16] to-100% to-secondary-100">
       <div className="max-w-[1200px] mx-auto grid  grid-cols-2 md:grid-cols-4 gap-8 lg:grid-cols-12 lg:gap-4">
         <div className="col-span-full lg:col-span-2">
           <h1 className="text-[#FFFBEA]! text-4xl! ">FlowerCo</h1>
