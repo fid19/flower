@@ -2,11 +2,12 @@ import Image from "next/image";
 import Divider from "../ui/Divider";
 import SectionContainer from "../ui/SectionContainer";
 import FlowerCard from "../ui/FlowerCard";
+import LogoLoop from "../LoopingLogos";
 
 export default function TopPicksSection() {
   return (
     <SectionContainer className="bg-[#FFFBEA] space-y-16">
-      <div className="max-w-[1200px] mx-auto  bg-gradient-to-l from-[#e7dec4] from-5% via-20% via-[#EEE6CE] to-90% to-[#e7dec4] min-h-16 p-6 border-[0.1px] w-full shadow-lg shadow-secondary-100/30 border-none">
+      <div className="max-w-[1200px] mx-auto  bg-gradient-to-l from-[#e7dec4] from-5% via-20% via-yellow-50 to-90% to-[#e7dec4] min-h-16 p-6 border-[0.1px] w-full shadow-lg shadow-secondary-100/30 border-none">
         <div className="max-w-[800px] mx-auto  border-secondary-100  flex sm:flex-row flex-col justify-between">
           <div className="">
             <span className="text-secondary-100! text-xs! font-extralight! font-playfair! opacity-80">
@@ -18,21 +19,39 @@ export default function TopPicksSection() {
             </h3>
           </div>
           <button className="text-sm! sm:text-lg! mt-4 sm:mt-  bg-secondary-100 text-[#EEE6CE] font-semibold px-4 py-2 rounded-xs shadow cursor-pointer hover:bg-[#EEE6CE] hover:text-secondary-100 transition ease-linear hover:border-[0.5px] hover:border-secondary-100 duration-300 font-playfair! border-[0.5px] border-transparent max-sm:self-start">
-            Claim Discount
+            Claim Offer
           </button>
         </div>
       </div>
 
-      <div className="max-w-[1200px] mx-auto space-y-12">
-        <h1 className="text-secondary-100! font-bold!">Our Top Flower Picks</h1>
+      <div className="max-w-[1200px] mx-auto space-y-4">
+        <div>
+          <h1 className="text-secondary-100! font-bold! mb-2">
+            Our Top Flower Picks
+          </h1>
+          <h2 className="text-secondary-100 text-xs font-playfair!  font-light! sm:text-lg inline-block max-w-[900px]">
+            For a short time, we’re giving Rewards members double points on
+            special blooms, plants and gifts. Go on – care even more wildly.
+          </h2>
+        </div>
 
-        <div className="grid grid-flow-col auto-cols-[270px] gap-5 p-8 overflow-x-auto">
-          <FlowerCard />
-          <FlowerCard />
-          <FlowerCard />
-          <FlowerCard />
-          <FlowerCard />
-          <FlowerCard />
+        <div className="relative">
+          <div className="absolute left-0 w-16 inset-y-0 bg-gradient-to-r from-0% from-[#FFFBEA] to-100% to-transparent z-10"></div>
+
+          <div className="absolute right-0 w-16 inset-y-0 bg-gradient-to-l from-0% from-[#FFFBEA] to-100% to-transparent z-10"></div>
+
+          <div className="grid grid-flow-col auto-cols-[270px] md:auto-cols-[350px] gap-5 p-8 overflow-x-auto overflow-clip">
+            <FlowerCard />
+            <FlowerCard />
+            <FlowerCard />
+            <FlowerCard />
+            <FlowerCard />
+            <FlowerCard />
+          </div>
+        </div>
+
+        <div className="py-16">
+          <LogoLoop fadeOutColor="#FFFBEA" />
         </div>
       </div>
     </SectionContainer>

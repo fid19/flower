@@ -88,10 +88,10 @@ export default function FeaturedSection() {
             initial="hidden"
             className="max-sm:pb-4 max-sm:bg-[#EEE6CE]/90"
           >
-            <span className="text-secondary-100 text-xs sm:text-sm font-playfair!  font-light! lg:text-lg uppercase inline-block pl-1.5">
+            <span className="text-secondary-100 text-xs sm:text-sm font-playfair!  font-light! uppercase inline-block pl-1.5 mb-2">
               Discover the magic of flower with us
             </span>
-            <h2 className="text-4xl md:text-5xl lg:text-7xl font-playfair text-secondary-100 mb-4">
+            <h2 className="text-4xl md:text-5xl lg:text-5xl font-playfair text-secondary-100 mb-4 font-bold">
               A Dozen Years of Care
             </h2>
             <motion.p
@@ -104,7 +104,7 @@ export default function FeaturedSection() {
                   opacity: 1,
                 },
               }}
-              className="col-span-full md:inline-block text-justify text-sm! sm:text-lg! leading-6! text-secondary-100! font-medium! font-serif! backdrop-blur-md py-4 sm:py-6 pr-6"
+              className="col-span-full md:inline-block text-justify text-sm! sm:text-lg! leading-7! text-secondary-100!s font-playfair! backdrop-blur-md py-4 sm:py-6 pr-6"
             >
               It&apos;s our 12th birthday. But this party is all about you. Our
               newest sweet treats, pampering picks, and flower delivery are here
@@ -123,7 +123,8 @@ export default function FeaturedSection() {
                   opacity: 1,
                 },
               }}
-              className=" hover:bg-secondary-100 hover:text-[#EEE6CE]! hover:border-2 hover:border-secondary-100 cursor-pointer mr-auto inline-block col-span-1 bg-[#EEE6CE]/80 p-4 border-2 text-secondary-100 font-bold! transition duration-200 ease-in-out"
+              className=" hover:bg-transparent hover:text-secondary-100! hover:border-2 hover:border-secondary-100 cursor-pointer mr-auto inline-block col-span-1 
+              bg-secondary-100 p-4 border-2 border-secondary-100 text-purple-50! font-bold! transition duration-200 ease-in-out"
             >
               Shop Now
             </motion.a>

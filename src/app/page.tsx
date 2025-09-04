@@ -5,6 +5,8 @@ import Hero from "./component/Hero";
 import FeaturedSection from "./component/FeaturedSection";
 import { useEffect } from "react";
 import TopPicksSection from "./component/TopPicksSection";
+import LoopingLogos from "./component/LoopingLogos";
+import Footer from "./component/Footer";
 
 export default function Home() {
   useEffect(() => {
@@ -24,6 +26,8 @@ export default function Home() {
       <FeaturedSection />
 
       <TopPicksSection />
+
+      <Footer />
     </div>
   );
 }
