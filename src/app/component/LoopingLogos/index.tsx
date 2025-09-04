@@ -27,19 +27,24 @@ const techLogos = [
 // Alternative with image sources
 const imageLogos = [
   {
-    src: "/logos/company1.png",
-    alt: "Company 1",
-    href: "https://company1.com",
+    src: "/pink-flower.png",
+    alt: "pink flower",
+    // href: "https://company1.com",
   },
   {
-    src: "/logos/company2.png",
-    alt: "Company 2",
-    href: "https://company2.com",
+    src: "/rose.png",
+    alt: "rose flower",
+    // href: "https://company2.com",
   },
   {
-    src: "/logos/company3.png",
-    alt: "Company 3",
-    href: "https://company3.com",
+    src: "/red-rose.png",
+    alt: "red rose",
+    // href: "https://company3.com",
+  },
+  {
+    src: "/blue-flower.png",
+    alt: "blue flower",
+    // href: "https://company3.com",
   },
 ];
 
@@ -48,12 +53,12 @@ export default function LoopingLogos({ fadeOutColor = "#ffffff" }) {
     <div>
       {" "}
       <LogoLoop
-        logos={techLogos}
-        speed={90}
+        logos={imageLogos}
+        speed={40}
         direction="left"
-        logoHeight={48}
-        gap={40}
-        pauseOnHover
+        logoHeight={100}
+        gap={20}
+        pauseOnHover={false}
         scaleOnHover
         fadeOut
         fadeOutColor={fadeOutColor}

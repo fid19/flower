@@ -64,7 +64,7 @@ export default function TopPicksSection() {
           </div>
         </div>
 
-        <div className="py-16">
+        <div className="py-16 overflow-hidden">
           <LogoLoop fadeOutColor="#FFFBEA" />
         </div>
       </div>
