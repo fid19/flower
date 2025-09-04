@@ -129,7 +129,7 @@ export default function FeaturedSection() {
                 },
               }}
               className=" hover:bg-transparent hover:text-secondary-100! hover:border-2 hover:border-secondary-100 cursor-pointer mr-auto inline-block col-span-1 
-              bg-secondary-100 p-4 border-2 border-secondary-100 text-purple-50! font-bold! transition duration-200 ease-in-out"
+              bg-secondary-100 p-4 border-2 border-secondary-100 text-[#EEE6CE]! font-bold! transition duration-200 ease-in-out"
             >
               Shop Now
             </motion.a>

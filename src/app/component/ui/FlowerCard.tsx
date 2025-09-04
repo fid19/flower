@@ -131,7 +131,7 @@ export default function FlowerCard() {
           {/* <h3 className="text-black! font-serif! text-xl! font-bold!">
                   $50
                 </h3> */}
-          <button className="text-sm! sm:text-lg! mt-4 text-[#E6E6FF] font-semibold px-4 py-2 rounded-xs shadow cursor-pointer hover:bg-[#EEE6CE] bg-secondary-100 hover:text-secondary-100 transition ease-linear hover:border-[0.5px] hover:border-secondary-100 duration-1s00 font-playfair! border-[0.5px] border-transparent max-sm:self-start">
+          <button className="text-sm! sm:text-lg! mt-4 text-[#EEE6CE] font-semibold px-4 py-2 rounded-xs shadow cursor-pointer hover:bg-[#EEE6CE] bg-secondary-100 hover:text-secondary-100 transition ease-linear hover:border-[0.5px] hover:border-secondary-100 duration-1s00 font-playfair! border-[0.5px] border-transparent max-sm:self-start">
             View
           </button>
         </div>

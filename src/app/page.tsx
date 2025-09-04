@@ -22,10 +22,9 @@ export default function Home() {
       <Hero />
 
       {/* ------------ Section --------------- */}
+      <TopPicksSection />
 
       <FeaturedSection />
-
-      <TopPicksSection />
 
       <Footer />
     </div>

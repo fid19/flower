@@ -7,7 +7,8 @@ import LogoLoop from "../LoopingLogos";
 export default function TopPicksSection() {
   return (
     <SectionContainer className="bg-[#FFFBEA] space-y-8 lg:space-y-16 ">
-      <div className="max-w-[1200px] bg-gradient-to-r from-10% from-secondary-100 via-50% via-[#624d16] to-100% to-secondary-100 mx-auto min-h-16 p-6 border-[0.1px] w-full shadow-lg shadow-secondary-100/30 border-none">
+      <Divider />
+      <div className="max-w-[1200px] bg-gradient-to-r from-0% from-secondary-100 via-40% via-[#624d16] to-100% to-secondary-100 mx-auto min-h-16 p-6 border-[0.1px] w-full shadow-lg shadow-secondary-100/30 border-none">
         <div className="max-w-[800px] mx-auto  border-secondary-100  flex sm:flex-row flex-col justify-between">
           <div className="">
             <span className="text-[#FFFBEA]! text-xs! font-extralight! font-playfair! opacity-80">
