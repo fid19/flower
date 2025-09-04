@@ -1,4 +1,7 @@
 import Image from "next/image";
+import { motion } from "motion/react";
+
+const MotionImage = motion(Image);
 
 // export default function FlowerCard() {
 //   return (
@@ -77,14 +80,21 @@ export default function FlowerCard() {
           Double Points
         </span>
       </div>
-      <div className="w-full h-64 relative">
-        <Image
+      <motion.div className="w-full h-64 relative overflow-hidden">
+        <MotionImage
           src="/flowerforsale1.webp"
           alt="flower"
           objectFit="cover"
           fill={true}
+          whileHover={{
+            scale: 1.2,
+          }}
+          transition={{
+            type: "tween",
+            duration: 0.2,
+          }}
         />
-      </div>
+      </motion.div>
 
       <div className="pb-1 px-1 flex gap-5 flex-col justify-between flex-1">
         <div className="space-y-5">
