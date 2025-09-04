@@ -62,9 +62,9 @@ export default function FeaturedSection() {
         viewport={{
           once: true,
         }}
-        className="relative grid grid-cols-6 sm:grid-cols-12 min-h-96 h-[80vh] flex-col sm:flex-row max-w-[1200px] mx-auto w-full gap-12"
+        className="relative grid grid-cols-6 sm:grid-cols-12 min-h-[80vh] flex-col sm:flex-row max-w-[1200px] mx-auto w-full gap-12"
       >
-        <div className="justify-between flex flex-col col-span-full sm:col-span-6 z-10 gap-8 bg-[#EEE6CE]/0 sm:bg-[#EEE6CE]">
+        <div className="justify-between flex flex-col col-span-full sm:col-span-6 z-10 gap-8 bg-[#EEE6CE]/0 sm:bg-[#EEE6CE] max-sm:bg-[#EEE6CE]/90">
           <motion.div
             layout
             variants={{
@@ -86,7 +86,7 @@ export default function FeaturedSection() {
             }}
             whileInView="show"
             initial="hidden"
-            className="max-sm:pb-4 max-sm:bg-[#EEE6CE]/90"
+            className="max-sm:pb-4 "
           >
             <span className="text-secondary-100 text-xs sm:text-sm font-playfair!  font-light! uppercase inline-block pl-1.5 mb-2">
               Discover the magic of flower with us
@@ -104,7 +104,7 @@ export default function FeaturedSection() {
                   opacity: 1,
                 },
               }}
-              className="col-span-full md:inline-block text-justify text-sm! sm:text-lg! sm:leading-7! leading-8! text-secondary-100!s font-playfair! backdrop-blur-md py-4 sm:py-6 pr-6"
+              className="col-span-full md:inline-block text-justify text-sm! sm:text-lg! sm:leading-9! leading-7! text-secondary-100!s font-playfair! backdrop-blur-md py-4 sm:py-6 pr-6"
             >
               Hi, we&apos;re Petal & Co. We don&apos;t just deliver flowers — we
               deliver care. Every bouquet is treated as if it were our own.
