@@ -13,7 +13,7 @@ export default function Navbar() {
   return (
     // <nav className="p-3 fixed w-full flex flex-row items-end justify-between z-20">
     <div className="top-4 fixed w-full px-2 z-20">
-      <nav className="mx-auto px-13 py-2 grid z-20 grid-cols-12  backdrop-blur-xs rounded-full sm:border-[0.5px] border-secondary-100  items-center md:max-w-[1200px]">
+      <nav className="mx-auto px-13 py-2 grid z-20 grid-cols-12  backdrop-blur-xs rounded-full sm:border-[0.5px] border-secondary-100  items-center md:max-w-[1200px] bg-[#FFFBEA]/80">
         {/* <div className="px-6 absolute flex inset-x-0 -bottom-1 items-center gap-5">
         <motion.div
           whileHover={{
@@ -117,7 +117,7 @@ export default function Navbar() {
                 key={_.link}
                 onHoverStart={() => setHoverItem(_.link)}
                 onHoverEnd={() => setHoverItem("")}
-                className={`relative`}
+                className={`relative text-secondary-100!`}
                 variants={{
                   [hoverItem]: {
                     opacity: [0.3, 1, 0.5, 1],
@@ -174,8 +174,8 @@ export default function Navbar() {
               >
                 <Link
                   className={`${
-                    pathname == _.link ? "text-secondary-100! font-medium!" : ""
-                  } `}
+                    pathname == _.link ? "font-bold!" : ""
+                  }  text-secondary-100!`}
                   href={_.link}
                 >
                   {_.title.toUpperCase()}

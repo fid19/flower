@@ -46,6 +46,26 @@ const imageLogos = [
     alt: "blue flower",
     // href: "https://company3.com",
   },
+  {
+    src: "/pink-flower.png",
+    alt: "pink flower",
+    // href: "https://company1.com",
+  },
+  {
+    src: "/rose.png",
+    alt: "rose flower",
+    // href: "https://company2.com",
+  },
+  {
+    src: "/red-rose.png",
+    alt: "red rose",
+    // href: "https://company3.com",
+  },
+  {
+    src: "/blue-flower.png",
+    alt: "blue flower",
+    // href: "https://company3.com",
+  },
 ];
 
 export default function LoopingLogos({ fadeOutColor = "#ffffff" }) {

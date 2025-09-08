@@ -6,7 +6,7 @@ import LogoLoop from "../LoopingLogos";
 
 export default function TopPicksSection() {
   return (
-    <SectionContainer className="bg-[#FFFBEA] space-y-8 lg:space-y-16 ">
+    <SectionContainer className="bg-[#FFFBEA] space-y-8 sm:space-y-16">
       <Divider />
       <div className="max-w-[1200px] bg-gradient-to-r from-0% from-secondary-100 via-40% via-[#624d16] to-100% to-secondary-100 mx-auto min-h-16 p-6 border-[0.1px] w-full shadow-lg shadow-secondary-100/30 border-none">
         <div className="max-w-[800px] mx-auto  border-secondary-100  flex sm:flex-row flex-col justify-between">
@@ -39,9 +39,9 @@ export default function TopPicksSection() {
         </div> */}
       </div>
 
-      <div className="max-w-[1200px] mx-auto space-y-4">
+      <div className="max-w-[1200px] mx-auto space-y-4 sm:space-y-8">
         <div>
-          <h1 className="text-secondary-100! font-bold! mb-2 max-sm:text-3xl!">
+          <h1 className="text-secondary-100! font-bold! mb-4 max-sm:text-3xl!">
             Our Top Flower Picks
           </h1>
           <h2 className="text-secondary-100 text-[16px] font-playfair!  font-light! sm:text-lg inline-block max-w-[900px]">
@@ -50,7 +50,7 @@ export default function TopPicksSection() {
           </h2>
         </div>
 
-        <div className="relative">
+        <div className="relative shadow-2xl/30 shadow-secondary-100">
           <div className="absolute left-0 w-4 md:w-16 inset-y-0 bg-gradient-to-r from-0% from-[#FFFBEA] to-100% to-transparent z-10"></div>
 
           <div className="absolute right-0 w-4 md:w-16 inset-y-0 bg-gradient-to-l from-0% from-[#FFFBEA] to-100% to-transparent z-10"></div>
