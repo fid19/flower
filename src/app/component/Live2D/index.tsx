@@ -6,28 +6,31 @@ import { useEffect, useState } from "react";
 export default function Live2D() {
   const [loaded, onLoaded] = useState(false);
 
-  //   useEffect(() => {
-  //     if (!loaded) return;
+  useEffect(() => {
+    if (!loaded) return;
 
-  //     // @ts-expect-error need to work on configuring this
-  //     window.L2Dwidget?.init({
-  //       model: {
-  //         jsonPath: "/live2d_models/whitecat/whitecat.model.json",
-  //       },
-  //       display: {
-  //         position: "left",
-  //         width: 240,
-  //         height: 240,
-  //         hOffset: -50,
-  //         vOffset: 0,
-  //       },
-  //       mobile: {
-  //         show: false,
-  //         scale: 0.5,
-  //         motion: true,
-  //       },
-  //     });
-  //   }, []);
+    if (!window.__live2d_initialization) {
+      window.__live2d_initialization = true;
+      // @ts-expect-error need to work on configuring this
+      window.L2Dwidget?.init({
+        model: {
+          jsonPath: "/live2d_models/whitecat/whitecat.model.json",
+        },
+        display: {
+          position: "left",
+          width: 240,
+          height: 240,
+          hOffset: -50,
+          vOffset: 0,
+        },
+        mobile: {
+          show: false,
+          scale: 0.5,
+          motion: true,
+        },
+      });
+    }
+  }, [loaded]);
 
   return (
     <>
@@ -37,25 +40,6 @@ export default function Live2D() {
         onLoad={() => {
           console.log("loading");
           onLoaded(true);
-
-          //@ts-expect-error not fixed
-          window.L2Dwidget?.init({
-            model: {
-              jsonPath: "/live2d_models/whitecat/whitecat.model.json",
-            },
-            display: {
-              position: "left",
-              width: 240,
-              height: 240,
-              hOffset: -50,
-              vOffset: 0,
-            },
-            mobile: {
-              show: false,
-              scale: 0.5,
-              motion: true,
-            },
-          });
         }}
       />
     </>
