@@ -65,7 +65,7 @@ export default function FeaturedSection() {
         }}
         className="relative grid grid-cols-6 sm:grid-cols-12 min-h-[80vh] flex-col sm:flex-row max-w-[1200px] mx-auto w-full gap-12"
       >
-        <div className="justify-between flex flex-col col-span-full sm:col-span-6 z-10 gap-8 bg-[#EEE6CE]/0 sm:bg-[#EEE6CE] max-sm:bg-[#EEE6CE]/90">
+        <div className="justify-between flex flex-col col-span-full sm:col-span-6 z-10 gap-8 bg-[#EEE6CE]/0 sm:bg-[#EEE6CE] max-sm:bg-[#EEE6CE]/70">
           <motion.div
             layout
             variants={{
@@ -75,11 +75,15 @@ export default function FeaturedSection() {
               },
               show: {
                 opacity: 1,
+                transition: {
+                  when: "beforeChildren",
+                },
                 x: 0,
               },
             }}
             transition={{
               duration: 0.3,
+
               delay: 1,
             }}
             viewport={{
@@ -92,7 +96,7 @@ export default function FeaturedSection() {
             <span className="text-secondary-100 text-xs sm:text-sm font-playfair!  font-light! uppercase inline-block pl-1.5 mb-2">
               Discover the magic of flower with us
             </span>
-            <h2 className="text-4xl md:text-5xl lg:text-5xl font-playfair text-secondary-100 mb-4 font-bold">
+            <h2 className="text-4xl md:text-5xl lg:text-5xl font-playfair text-secondary-100 mb-4 font-bold pl-1">
               ABOUT FLOWERCO
             </h2>
             <motion.p
@@ -105,7 +109,7 @@ export default function FeaturedSection() {
                   opacity: 1,
                 },
               }}
-              className="col-span-full md:inline-block text-justify text-sm! sm:text-lg! sm:leading-9! leading-7! text-secondary-100!s font-playfair! backdrop-blur-md py-4 sm:py-6 pr-6"
+              className="pl-1 col-span-full md:inline-block text-justify text-sm! sm:text-lg! sm:leading-9! leading-7! text-secondary-100!s font-playfair! py-4 sm:py-6 pr-6"
             >
               Hi, we&apos;re Petal & Co. We don&apos;t just deliver flowers — we
               deliver care. Every bouquet is treated as if it were our own.
@@ -149,7 +153,7 @@ export default function FeaturedSection() {
           ></video>
         </div>
 
-        <div className="absolute inset-0 bg-[#EEE6CE] opacity-30"></div>
+        <div className="absolute inset-0 bg-[#EEE6CE] opacity-5"></div>
       </motion.div>
 
       <Divider textClass="top-auto z-10 -bottom-1" />

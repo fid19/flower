@@ -44,7 +44,7 @@ export default function Hero() {
     >
       <div className="h-[100vh] sticky top-0">
         <motion.div
-          className="mx-auto aspect-square h-full"
+          className="mx-auto w-full sm:w-auto sm:aspect-square h-full"
           style={{
             rotate,
             scale: scale,

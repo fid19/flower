@@ -21,7 +21,7 @@ export const FlowerAnimation = ({
   }, []);
 
   return (
-    <div className="relative aspect-square h-full">
+    <div className="relative w-full sm:w-auto sm:aspect-square h-full">
       <video
         poster="/flower.webp"
         style={{
@@ -36,12 +36,11 @@ export const FlowerAnimation = ({
         muted={true}
         loop={false}
         autoPlay={true}
-        className="object-cover max-sm:-left-24 absolute"
+        className="object-cover w-full max-sm:top-10 h-full absolute"
         src="/flower-video.webm"
         onEnded={() => {
           videoRef2.current?.play();
           setShowVideo(() => true);
-          window.setTimeout(() => {}, 0);
         }}
       />
 
@@ -57,7 +56,7 @@ export const FlowerAnimation = ({
           opacity: showVideo ? 1 : 0,
           scale: 1.2,
         }}
-        className="object-cover max-sm:-left-24 absolute"
+        className="object-cover w-full max-sm:top-10 h-full absolute"
         src="/flower-video-2.webm"
       />
     </div>
