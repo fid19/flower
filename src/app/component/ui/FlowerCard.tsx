@@ -75,7 +75,7 @@ const MotionImage = motion(Image);
 export default function FlowerCard() {
   return (
     <div className="border-[0.1px] border-secondary-100/10 bg-[#EEE6CE] w-full h-full min-h-96 space-y-4 flex flex-col relative">
-      <div className="absolute bg-gradient-to-r from-40% from-purple-700 via-purple-600 via-60%  to-100% to-red-600 top-2 right-2 rounded-4xl z-[15]">
+      <div className=" opacity-80 absolute bg-gradient-to-r from-40% from-purple-700 via-purple-600 via-60%  to-100% to-red-600 top-2 right-2 rounded-4xl z-[15]">
         <span className="text-[9px] text-white font-bold block p-1">
           Double Points
         </span>

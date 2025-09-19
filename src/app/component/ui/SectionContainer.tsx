@@ -6,7 +6,7 @@ export default function SectionContainer({
   children: React.ReactNode;
 }) {
   return (
-    <section className={`relative min-h-96 py-24 px-6 ${className}`}>
+    <section className={`relative min-h-96 py-24 px-4 md:px-6 ${className}`}>
       {children}
     </section>
   );

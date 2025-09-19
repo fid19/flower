@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Playfair_Display, Roboto } from "next/font/google";
 import "./globals.css";
+import Live2D from "./component/Live2D";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,6 +39,8 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${playfairDisplay.variable} ${roboto.variable} antialiased`}
       >
         {children}
+
+        <Live2D />
       </body>
     </html>
   );

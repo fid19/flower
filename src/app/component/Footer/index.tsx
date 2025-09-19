@@ -7,10 +7,10 @@ export default function Footer() {
     <SectionContainer className="bg-gradient-to-r from-10% from-secondary-100 via-50% via-[#624d16] to-100% to-secondary-100">
       <div className="max-w-[1200px] mx-auto grid  grid-cols-2 md:grid-cols-4 gap-8 lg:grid-cols-12 lg:gap-4">
         <div className="col-span-full lg:col-span-2">
-          <h1 className="text-[#FFFBEA]! text-4xl! ">FlowerCo</h1>
+          <h1 className="text-[#FFFBEA]/90! text-4xl! ">FlowerCo</h1>
         </div>
         <div className="flex gap-3 flex-col col-span-full lg:col-span-2">
-          <p className="text-[#FFFBEA]! text-sm! font-sans!">
+          <p className="text-[#FFFBEA]/90! text-sm! font-sans!">
             Email us{" "}
             <span className="text inline-block">
               <Link href="/" className="text-[#FFFBEA]! font-sans! font-bold">
@@ -20,13 +20,13 @@ export default function Footer() {
           </p>{" "}
           <div className="font-sans space-x-2">
             <Link href="/" className="inline-block">
-              <SiFacebook className="w-6 h-6 text-[#FFFBEA]" />
+              <SiFacebook className="w-6 h-6 text-[#FFFBEA]/90" />
             </Link>
             <Link href="/" className="inline-block">
-              <SiInstagram className="w-6 h-6 text-[#FFFBEA]" />
+              <SiInstagram className="w-6 h-6 text-[#FFFBEA]/90" />
             </Link>
             <Link href="/" className="inline-block">
-              <SiTwitch className="w-6 h-6 text-[#FFFBEA]" />
+              <SiTwitch className="w-6 h-6 text-[#FFFBEA]/90" />
             </Link>
           </div>
           <div className="flex gap-2 items-center relative">
@@ -34,7 +34,7 @@ export default function Footer() {
             <img className="w-20 h-auto" src="/google-store.svg" />
           </div>
         </div>
-        <div className="text-[#FFFBEA]! flex flex-col gap-3 font-sans">
+        <div className="text-[#FFFBEA]/90! flex flex-col gap-3 font-sans">
           <span className="font-bold">About Us</span>
           <Link href="#" className="text-sm ">
             Our Tech Blog
@@ -46,7 +46,7 @@ export default function Footer() {
             Careers
           </Link>
         </div>
-        <div className="text-[#FFFBEA]! flex flex-col gap-3 font-sans col-span-1 lg:col-span-2">
+        <div className="text-[#FFFBEA]/90! flex flex-col gap-3 font-sans col-span-1 lg:col-span-2">
           <span className="font-bold">Our Flower & Plants</span>
           <Link href="#" className="text-sm ">
             Plant care
@@ -61,7 +61,7 @@ export default function Footer() {
             Flower delivery
           </Link>
         </div>
-        <div className="text-[#FFFBEA]! flex flex-col gap-3 font-sans col-span-1 lg:col-span-2">
+        <div className="text-[#FFFBEA]/90! flex flex-col gap-3 font-sans col-span-1 lg:col-span-2">
           <span className="font-bold">Need help?</span>
           <Link href="#" className="text-sm ">
             Where is my order?
@@ -85,7 +85,7 @@ export default function Footer() {
             Privacy statement
           </Link>
         </div>
-        <div className="text-[#FFFBEA]! flex flex-col gap-3 font-sans col-span-1 lg:col-span-2">
+        <div className="text-[#FFFBEA]/90! flex flex-col gap-3 font-sans col-span-1 lg:col-span-2">
           <span className="font-bold">Discounts & offers</span>
           <Link href="#" className="text-sm ">
             Keyworker discount

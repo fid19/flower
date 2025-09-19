@@ -3,11 +3,12 @@
 import HeaderText from "../HeaderText";
 import { motion, stagger } from "motion/react";
 import Divider from "../ui/Divider";
+import SectionContainer from "../ui/SectionContainer";
 
 export default function FeaturedSection() {
   return (
-    <div className="relative min-h-96 bg-radial-[at_50%_50%] from-10% from-[#f6ebd1] via-[#EEE6CE] via-70% to-100% to-[#EEE6CE] py-12 md:py-24 px-6">
-      <Divider />
+    <SectionContainer className="relative min-h-96 bg-radial-[at_50%_50%] from-10% from-[#f6ebd1] via-[#EEE6CE] via-70% to-100% to-[#EEE6CE]">
+      <Divider textClass="-top-1!" />
 
       {/* <motion.div
         layout
@@ -47,9 +48,9 @@ export default function FeaturedSection() {
             opacity: 1,
             transition: {
               type: "tween",
-              duration: 1,
+              duration: 0.6,
               when: "beforeChildren",
-              delayChildren: stagger(0.3),
+              delayChildren: stagger(0.2),
             },
           },
           hidden: {
@@ -79,7 +80,7 @@ export default function FeaturedSection() {
             }}
             transition={{
               duration: 0.3,
-              delay: 2,
+              delay: 1,
             }}
             viewport={{
               once: true,
@@ -128,7 +129,7 @@ export default function FeaturedSection() {
                   opacity: 1,
                 },
               }}
-              className=" hover:bg-transparent hover:text-secondary-100! hover:border-2 hover:border-secondary-100 cursor-pointer mr-auto inline-block col-span-1 
+              className="hover:bg-transparent hover:text-secondary-100! hover:border-2 hover:border-secondary-100 cursor-pointer mr-auto inline-block col-span-1 
               bg-secondary-100 p-4 border-2 border-secondary-100 text-[#EEE6CE]! font-bold! transition duration-200 ease-in-out"
             >
               Shop Now
@@ -152,6 +153,6 @@ export default function FeaturedSection() {
       </motion.div>
 
       <Divider textClass="top-auto z-10 -bottom-1" />
-    </div>
+    </SectionContainer>
   );
 }
