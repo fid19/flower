@@ -114,13 +114,13 @@ export default function TopPicksSection() {
           <GiArrowMotion
             onClick={scrollLeft}
             layout
-            className="max-sm:hidden cursor-pointer duration-100 ease-in-out transition-all hover:scale-110 rotate-135 hover:text-secondary-100 text-secondary-100/50 h-10 w-auto -translate-1/2 absolute inset-y-1/2 z-10"
+            className="max-sm:w-6 max-sm:-translate-x-1 max-sm:opacity-70 cursor-pointer duration-100 ease-in-out transition-all hover:scale-110 rotate-135 hover:text-secondary-100 text-secondary-100/50 h-10 w-auto -translate-1/2 absolute inset-y-1/2 z-10"
           />
 
           <GiArrowMotion
             onClick={scrollRight}
             layout
-            className="max-sm:hidden cursor-pointer duration-100 ease-in-out transition-all  hover:scale-110 -rotate-45 hover:text-secondary-100 text-secondary-100/50 h-10 w-auto translate-x-1/2 -translate-y-1/2 absolute inset-y-1/2 z-10 right-0"
+            className="max-sm:w-6 max-sm:translate-x-1 max-sm:opacity-70 cursor-pointer duration-100 ease-in-out transition-all  hover:scale-110 -rotate-45 hover:text-secondary-100 text-secondary-100/50 h-10 w-auto translate-x-1/2 -translate-y-1/2 absolute inset-y-1/2 z-10 right-0"
           />
 
           <div

@@ -27,7 +27,7 @@ const items = [
 
 export default function FlowerCollection() {
   return (
-    <SectionContainer className="py-36 space-y-18">
+    <SectionContainer className="py-36 space-y-18 overflow-hidden">
       {/* <Masonry
         items={items}
         ease="power3.out"
@@ -56,8 +56,8 @@ export default function FlowerCollection() {
             objectFit="contain"
             className="absolute max-sm:scale-y-[-1] -scale-x-100 invert translate-x-1/2 -z-0"
           />
-          <h1 className="z-10 relative text-center text-secondary-100! text-4xl!">
-            <span className="block uppercase sm:text-8xl font-bold tracking-widest">
+          <h1 className="z-10 relative text-center text-secondary-100! text-3xl! sm:text-4xl!">
+            <span className="block uppercase text-4xl! sm:text-8xl font-bold tracking-widest">
               Bloom
             </span>{" "}
             Into The Autumn
@@ -98,7 +98,7 @@ export default function FlowerCollection() {
           </span>
         </div>
 
-        <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-5 auto-cols-fr gap-4 sm:px-12 sm:gap-12">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 auto-cols-fr gap-4 sm:px-12 sm:gap-12">
           {[
             {
               src: "flora1.avif",
@@ -175,7 +175,7 @@ export default function FlowerCollection() {
           </span>
         </div>
 
-        <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-5 auto-cols-fr gap-4 sm:px-12 sm:gap-12">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 auto-cols-fr gap-4 sm:px-12 sm:gap-12">
           {[
             {
               src: "flora1.avif",
@@ -255,7 +255,7 @@ export default function FlowerCollection() {
           </span>
         </div>
 
-        <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-5 auto-cols-fr gap-4 sm:px-12 sm:gap-12">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 auto-cols-fr gap-4 sm:px-12 sm:gap-12">
           {[
             {
               src: "flora1.avif",
