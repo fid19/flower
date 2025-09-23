@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { GiBroadheadArrow } from "react-icons/gi";
 import Divider from "../ui/Divider";
 import SectionContainer from "../ui/SectionContainer";
@@ -23,20 +22,58 @@ export default function TopPicksSection() {
   };
 
   return (
-    <SectionContainer className="bg-[#FFFBEA] space-y-8 sm:space-y-16">
+    <SectionContainer className="bg-[#FFFBEA] space-y-16">
       <Divider textClass="-top-1!" />
-      <div className="max-w-[1200px] bg-gradient-to-r from-0% from-secondary-100 via-40% via-[#624d16] to-100% to-secondary-100 mx-auto min-h-16 p-6 border-[0.1px] w-full shadow-lg shadow-secondary-100/30 border-none">
-        <div className="max-w-[800px] mx-auto  border-secondary-100  flex sm:flex-row flex-col justify-between">
+      <motion.div
+        animate={{
+          background: [
+            "linear-gradient(to-right,rgba(81, 60, 6, 1) 0%, rgba(134, 118, 77, 1) 40%, rgba(81, 60, 6, 0.9) 100%)",
+
+            "linear-gradient(to right,rgba(81, 60, 6, 1) 0%, rgba(134, 118, 77, 1) 50%, rgba(81, 60, 6, 1) 100%)",
+
+            "linear-gradient(to right,rgba(81, 60, 6, 1) 0%, rgba(134, 118, 77, 1) 50%, rgba(134, 118, 77, 1) 100%)",
+
+            "linear-gradient(to right,rgba(134, 118, 77, 1) 0%, rgba(134, 118, 77, 1) 50%, rgba(81, 60, 6, 1) 100%);",
+
+            "linear-gradient(to-right,rgba(81, 60, 6, 1) 0%, rgba(134, 118, 77, 1) 40%, rgba(81, 60, 6, 0.9) 100%)",
+          ],
+        }}
+        transition={{
+          duration: 6,
+          repeat: Infinity,
+          repeatType: "reverse",
+          ease: "linear",
+          repeatDelay: 0,
+        }}
+        className="max-w-[1200px] mx-auto border-[0.1px] w-full border-none relative"
+      >
+        <div
+          className="absolute bg-[url(/yellow-flower.png)] bg-cover bg-center bg-no-repeat  inset-y-0 left-0 right-0 bg-blend-overlay bg-black/50 opacity-50"
+          style={
+            {
+              // clipPath: "polygon(15% 0, 100% 0%, 100% 100%, 10% 100%)",
+            }
+          }
+        ></div>
+        <div className="max-w-[800px] mx-auto p-6 sm:py-6! border-secondary-100 max-sm:space-y-4 flex flex-col sm:flex-row justify-between">
           <div className="">
-            <span className="text-[#FFFBEA]! text-xs! font-extralight! font-playfair! opacity-80">
-              Limited Time Only 🎁
+            <span className="text-[#FFFBEA]! text-xs! font-extralight! font-playfair! opacity-80 relative flex items-center gap-1">
+              Limited Time Only{" "}
+              {/* <Image
+                alt="flower"
+                src="/bouquet.gif"
+                width={32}
+                height={32}
+                quality={10}
+                className=""
+              /> */}
             </span>
-            <h3 className="font-playfair! text-sm! sm:text-xl! font-normal! text-[#FFFBEA]! tracking-normal! mt-2">
-              Get <span className="text-xl lg:text-4xl font-serif!">$10</span>{" "}
+            <h3 className="font-playfair! text-xl! sm:text-2xl! text-[#FFFBEA]! opacity-90! font-medium mt-1">
+              Get <span className="text-xl lg:text-4xl font-serif">$10</span>{" "}
               Off Your First Order With Us
             </h3>
           </div>
-          <button className="text-sm! sm:text-lg! mt-4 bg-[#FFFBEA] text-secondary-100 font-semibold px-4 py-2 rounded-xs shadow cursor-pointer hover:bg-[#EEE6CE] hover:text-secondary-100 transition ease-linear hover:border-[0.5px] hover:border-transparent duration-300 font-playfair! border-[0.5px] border-transparent max-sm:self-start">
+          <button className="text-md! sm:text-lg! bg-[#FFFBEA] text-secondary-100 font-semibold px-4 py-2 rounded-xs shadow cursor-pointer! hover:bg-[#EEE6CE] hover:text-secondary-100 transition ease-linear hover:border-[0.5px] hover:border-transparent duration-300 font-playfair! border-[0.5px] border-transparent max-sm:self-start sm:items-center z-10">
             Claim Offer
           </button>
         </div>
@@ -54,20 +91,20 @@ export default function TopPicksSection() {
             Claim Offer
           </button>
         </div> */}
-      </div>
+      </motion.div>
 
-      <div className="max-w-[1200px] mx-auto space-y-4 sm:space-y-8">
+      <div className="max-w-[1200px] mx-auto space-y-4">
         <div>
-          <h1 className="text-secondary-100! font-bold! mb-4 max-sm:text-3xl!">
+          <h1 className="text-secondary-100! font-bold! mb-3 max-sm:text-4xl!">
             Our Top Flower Picks
           </h1>
-          <h2 className="text-secondary-100 text-[16px] font-playfair!  font-light! sm:text-lg inline-block max-w-[900px]">
+          <h2 className="text-secondary-100 text-[16px] font-serif!  font-extralight! text-lg! sm:text-xl! inline-block">
             For a short time, we’re giving Rewards members double points on
             special blooms, plants and gifts. Go on – care even more wildly.
           </h2>
         </div>
 
-        <div className=" relative shadow-2xl/30 shadow-secondary-100">
+        <div className="pt-8 relative shadow-[0px_1px_2px_0px_rgba(255,255,255,0.1)_inset,0px_-1px_2px_0px_rgba(255,255,255,0.1)_inset]">
           <div className="absolute left-0 w-4 md:w-24 inset-y-0 bg-gradient-to-r from-0% from-[#FFFBEA] to-100% to-transparent z-10"></div>
 
           <div className="absolute right-0 w-4 md:w-24 inset-y-0 bg-gradient-to-l from-0% from-[#FFFBEA] to-100% to-transparent z-10"></div>
@@ -88,7 +125,7 @@ export default function TopPicksSection() {
 
           <div
             ref={scrollRef}
-            className=" grid grid-flow-col auto-cols-[270px] md:auto-cols-[350px] gap-5 p-8 overflow-x-auto no-scrollbar"
+            className="grid grid-flow-col auto-cols-[270px] md:auto-cols-[290px] gap-8 p-8 sm:px-12 overflow-x-auto no-scrollbar"
           >
             <FlowerCard />
             <FlowerCard />
@@ -99,7 +136,7 @@ export default function TopPicksSection() {
           </div>
         </div>
 
-        <div className=" py-16 overflow-hidden">
+        <div className=" py-8 overflow-hidden">
           <LogoLoop fadeOutColor="#FFFBEA" />
         </div>
       </div>

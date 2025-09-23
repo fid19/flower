@@ -63,7 +63,7 @@ export default function FeaturedSection() {
         viewport={{
           once: true,
         }}
-        className="relative grid grid-cols-6 sm:grid-cols-12 min-h-[80vh] flex-col sm:flex-row max-w-[1200px] mx-auto w-full gap-12"
+        className="relative grid grid-cols-6 sm:grid-cols-12 flex-col sm:flex-row max-w-[1200px] mx-auto w-full gap-12"
       >
         <div className="justify-between flex flex-col col-span-full sm:col-span-6 z-10 gap-8 bg-[#EEE6CE]/0 sm:bg-[#EEE6CE] max-sm:bg-[#EEE6CE]/70">
           <motion.div
@@ -153,7 +153,7 @@ export default function FeaturedSection() {
           ></video>
         </div>
 
-        <div className="absolute inset-0 bg-[#EEE6CE] opacity-5"></div>
+        <div className="absolute inset-0 bg-[#EEE6CE] opacity-20"></div>
       </motion.div>
 
       <Divider textClass="top-auto z-10 -bottom-1" />

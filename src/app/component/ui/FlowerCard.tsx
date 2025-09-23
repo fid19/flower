@@ -74,13 +74,13 @@ const MotionImage = motion(Image);
 
 export default function FlowerCard() {
   return (
-    <div className="border-[0.1px] border-secondary-100/10 bg-[#EEE6CE] w-full h-full min-h-96 space-y-4 flex flex-col relative">
+    <div className="rounded-lg! border-secondary-100/10 bg-[#EEE6CE] w-full space-y-2 flex flex-col relative hover:scale-105 transition-all duration-100 hover:shadow-lg">
       <div className=" opacity-80 absolute bg-gradient-to-r from-40% from-purple-700 via-purple-600 via-60%  to-100% to-red-600 top-2 right-2 rounded-4xl z-[15]">
         <span className="text-[9px] text-white font-bold block p-1">
           Double Points
         </span>
       </div>
-      <motion.div className="w-full h-64 relative overflow-hidden">
+      <motion.div className="w-full h-44 relative overflow-hidden rounded-t-lg">
         <MotionImage
           src="/flowerforsale1.webp"
           alt="flower"
@@ -96,29 +96,28 @@ export default function FlowerCard() {
         />
       </motion.div>
 
-      <div className="pb-1 px-1 flex gap-5 flex-col justify-between flex-1">
+      <div className="py-2 px-2 flex gap-5 flex-col justify-between flex-1">
         <div className="space-y-5">
           <div className="space-y-1">
-            <div>
-              <span className="uppercase text-[8px] font-bold text-secondary-100 text-bold font-serif">
+            <div className=" flex justify-between items-end">
+              <span className="uppercase text-[9px] font-bold text-secondary-100 text-bold font-serif">
                 The rue
               </span>
-              <h3 className="text-xl! text-secondary-100! font-medium">
-                LetterBox Flowers
-              </h3>
-            </div>
-
-            <div className="flex items-center gap-1.5">
-              <div className="flex relative h-4">
-                <img src="/star.svg" />
-                <img src="/star.svg" />
-                <img src="/star.svg" />
-                <img src="/star.svg" />
+              <div className="flex items-center gap-1.5 mt-2">
+                <div className="flex relative h-4">
+                  <img src="/star.svg" />
+                  <img src="/star.svg" />
+                  <img src="/star.svg" />
+                  <img src="/star.svg" />
+                </div>
+                <span className="ml-2   text-secondary-100  font-normal font-playfair text-sm inline-block ">
+                  4.0/5.0
+                </span>
               </div>
-              <span className="text-secondary-100/70 font-sans font-medium text-xs inline-block">
-                4.5/5.0
-              </span>
             </div>
+            <h3 className="text-xl! text-secondary-100! font-medium">
+              LetterBox Flowers
+            </h3>
           </div>
 
           <p className="font-serif! text-secondary-100/80! text-sm!">
@@ -131,7 +130,7 @@ export default function FlowerCard() {
           {/* <h3 className="text-black! font-serif! text-xl! font-bold!">
                   $50
                 </h3> */}
-          <button className="text-sm! sm:text-lg! mt-4 text-[#EEE6CE] font-semibold px-4 py-2 rounded-xs shadow cursor-pointer hover:bg-[#EEE6CE] bg-secondary-100 hover:text-secondary-100 transition ease-linear hover:border-[0.5px] hover:border-secondary-100 duration-1s00 font-playfair! border-[0.5px] border-transparent max-sm:self-start">
+          <button className="text-sm! mt-4 text-secondary-100 font-semibold px-4 py-2 rounded-xs cursor-pointer  hover:text-secondary-100 transition ease-linear hover:border-[0.5px] border-secondary-100 duration-1s00 font-playfair! border-[0.5px] max-sm:self-start">
             View
           </button>
         </div>

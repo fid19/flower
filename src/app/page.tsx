@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import TopPicksSection from "./component/TopPicksSection";
 import LoopingLogos from "./component/LoopingLogos";
 import Footer from "./component/Footer";
+import FlowerCollection from "./component/FlowerCollection";
 
 export default function Home() {
   useEffect(() => {
@@ -24,7 +25,9 @@ export default function Home() {
       {/* ------------ Section --------------- */}
       <TopPicksSection />
 
-      <FeaturedSection />
+      {/* <FeaturedSection /> */}
+
+      <FlowerCollection />
 
       <Footer />
     </div>
