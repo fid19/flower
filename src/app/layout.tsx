@@ -40,7 +40,7 @@ export default function RootLayout({
       >
         {children}
 
-        {/* <Live2D /> */}
+        <Live2D />
       </body>
     </html>
   );
