@@ -25,7 +25,7 @@ export default function Home() {
       {/* ------------ Section --------------- */}
       <TopPicksSection />
 
-      {/* <FeaturedSection /> */}
+      <FeaturedSection />
 
       <FlowerCollection />
 
