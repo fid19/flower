@@ -57,7 +57,7 @@ export default function FlowerCollection() {
             className="absolute max-sm:scale-y-[-1] -scale-x-100 invert translate-x-1/2 -z-0"
           />
           <h1 className="z-10 relative text-center text-secondary-100! text-3xl! sm:text-4xl!">
-            <span className="block uppercase text-4xl! sm:text-8xl font-bold tracking-widest">
+            <span className="block uppercase text-4xl! sm:text-8xl! font-bold tracking-widest">
               Bloom
             </span>{" "}
             Into The Autumn
